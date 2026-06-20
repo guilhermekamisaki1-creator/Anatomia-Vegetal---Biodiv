@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anatomia e Morfologia Vegetal — Aula 12 | Biodiversidade</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf6ec; --bg-alt:#f2ebdb; --paper:#fffdf7;
+    --ink:#272320; --ink-soft:#5d5546; --ink-faint:#8b8270;
+    --line:#e4d9c3; --line-soft:#efe7d6;
+    --green:#3a6b48; --green-deep:#2a5037; --green-soft:#e7f0e3; --green-tint:#f0f5ea;
+    --terra:#b15f37; --terra-soft:#f6e7dc; --amber:#bd8521; --amber-soft:#f7edd4;
+    --xylem:#c05a33; --phloem:#3f7d8c; --cambio:#5fa066; --suber:#8a5733;
+    --shadow:0 1px 2px rgba(60,45,25,.04), 0 8px 28px -12px rgba(60,45,25,.16);
+    --shadow-sm:0 1px 2px rgba(60,45,25,.05), 0 4px 14px -8px rgba(60,45,25,.14);
+    --radius:16px; --maxw:920px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hanken Grotesk",system-ui,sans-serif;font-size:17px;line-height:1.72;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  #progress{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--green),var(--amber));z-index:120;transition:width .08s linear;}
+  nav{position:sticky;top:0;z-index:100;background:rgba(250,246,236,.86);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line);}
+  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:0 22px;display:flex;align-items:center;gap:18px;height:58px;}
+  .nav-brand{font-family:"Fraunces",serif;font-weight:600;font-size:1.02rem;letter-spacing:-.01em;color:var(--green-deep);white-space:nowrap;display:flex;align-items:center;gap:9px;}
+  .nav-brand .leaf{width:20px;height:20px;flex:none;}
+  .nav-links{display:flex;gap:3px;overflow-x:auto;margin-left:auto;scrollbar-width:none;-ms-overflow-style:none;}
+  .nav-links::-webkit-scrollbar{display:none;}
+  .nav-links a{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.02em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;padding:6px 10px;border-radius:8px;white-space:nowrap;transition:background .15s,color .15s;}
+  .nav-links a:hover{background:var(--green-soft);color:var(--green-deep);}
+  .nav-links a.active{background:var(--green);color:#fff;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+  section{padding:46px 0 8px;}
+  header.hero{background:radial-gradient(120% 80% at 88% -10%, rgba(58,107,72,.10), transparent 60%),radial-gradient(120% 90% at 5% 110%, rgba(189,133,33,.09), transparent 55%),linear-gradient(180deg,#f7f1e3,#faf6ec);border-bottom:1px solid var(--line);overflow:hidden;position:relative;}
+  .hero-inner{max-width:var(--maxw);margin:0 auto;padding:60px 22px 52px;position:relative;z-index:2;}
+  .hero .eyebrow{font-family:"JetBrains Mono",monospace;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--green);font-weight:600;margin-bottom:18px;display:flex;align-items:center;gap:10px;}
+  .hero .eyebrow::before{content:"";width:30px;height:1.5px;background:var(--green);display:inline-block;}
+  .hero h1{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(2.5rem,6.6vw,4.3rem);line-height:1.02;letter-spacing:-.025em;margin:0 0 8px;color:var(--ink);}
+  .hero h1 em{font-style:italic;color:var(--green-deep);font-weight:500;}
+  .hero .sub{font-size:1.16rem;color:var(--ink-soft);max-width:62ch;margin:18px 0 30px;line-height:1.6;}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:10px;}
+  .chip{font-family:"JetBrains Mono",monospace;font-size:.74rem;background:var(--paper);border:1px solid var(--line);padding:7px 13px;border-radius:999px;color:var(--ink-soft);display:inline-flex;align-items:center;gap:7px;box-shadow:var(--shadow-sm);}
+  .chip b{color:var(--green-deep);font-weight:700;}
+  .hero-art{position:absolute;right:-40px;top:50%;transform:translateY(-50%);width:340px;max-width:38vw;opacity:.92;z-index:1;pointer-events:none;}
+  @media(max-width:760px){.hero-art{display:none;}}
+  h2.sec{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(1.7rem,3.6vw,2.35rem);letter-spacing:-.02em;line-height:1.1;margin:0 0 6px;color:var(--ink);display:flex;align-items:baseline;gap:14px;}
+  h2.sec .num{font-family:"JetBrains Mono",monospace;font-size:.95rem;font-weight:600;color:var(--green);background:var(--green-soft);border-radius:8px;padding:3px 9px;letter-spacing:0;flex:none;align-self:center;}
+  .sec-lead{font-size:1.08rem;color:var(--ink-soft);max-width:70ch;margin:14px 0 26px;}
+  h3{font-family:"Fraunces",serif;font-weight:600;font-size:1.32rem;letter-spacing:-.01em;margin:34px 0 10px;color:var(--green-deep);}
+  h4{font-family:"Hanken Grotesk",sans-serif;font-weight:700;font-size:1.02rem;margin:22px 0 6px;color:var(--ink);letter-spacing:-.005em;}
+  p{margin:0 0 15px;}
+  strong{color:var(--ink);font-weight:700;}
+  .wrap a{color:var(--green-deep);text-decoration:underline;text-underline-offset:2px;text-decoration-color:var(--line);}
+  ul,ol{margin:0 0 16px;padding-left:22px;}
+  li{margin:5px 0;}
+  li::marker{color:var(--green);}
+  em.term{font-style:normal;font-weight:700;color:var(--green-deep);}
+  .rule{height:1px;background:var(--line);margin:40px 0 0;border:0;}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;box-shadow:var(--shadow);margin:20px 0;}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  @media(max-width:680px){.grid2,.grid3{grid-template-columns:1fr;}}
+  .callout{border-radius:14px;padding:16px 18px;margin:20px 0;border:1px solid;position:relative;font-size:.99rem;}
+  .callout .co-h{font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-bottom:7px;display:flex;align-items:center;gap:8px;}
+  .callout p:last-child{margin-bottom:0;}
+  .co-def{background:var(--green-tint);border-color:#cfe2c5;} .co-def .co-h{color:var(--green-deep);}
+  .co-warn{background:var(--terra-soft);border-color:#eccdb8;} .co-warn .co-h{color:var(--terra);}
+  .co-vest{background:var(--amber-soft);border-color:#ecd9a8;} .co-vest .co-h{color:#9a6c12;}
+  .co-comp{background:#eef1f4;border-color:#d6dde3;} .co-comp .co-h{color:#4a6072;}
+  .ic{width:14px;height:14px;flex:none;}
+  .tbl-wrap{overflow-x:auto;margin:20px 0;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow-sm);}
+  table{border-collapse:collapse;width:100%;font-size:.94rem;background:var(--paper);min-width:520px;}
+  thead th{background:var(--green-deep);color:#f4efe3;font-weight:600;text-align:left;padding:11px 14px;font-family:"Hanken Grotesk",sans-serif;font-size:.84rem;letter-spacing:.02em;text-transform:uppercase;}
+  tbody td{padding:11px 14px;border-top:1px solid var(--line-soft);vertical-align:top;}
+  tbody tr:nth-child(even){background:#fbf7ee;}
+  td.name{font-weight:700;color:var(--green-deep);white-space:nowrap;}
+  .pill{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:.68rem;font-weight:600;padding:2px 7px;border-radius:6px;letter-spacing:.02em;vertical-align:middle;}
+  .pill-viva{background:var(--green-soft);color:var(--green-deep);} .pill-morta{background:#eee3da;color:#7c5a44;}
+  .pill-lig{background:#f3ddd0;color:#a84d29;} .pill-cel{background:#dfeef0;color:#2f6975;} .pill-sub{background:#ece0d4;color:#7a5430;}
+  figure{margin:24px 0;}
+  .fig-box{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:22px 18px 14px;box-shadow:var(--shadow);}
+  .fig-box svg{display:block;width:100%;height:auto;}
+  figcaption{font-size:.86rem;color:var(--ink-faint);margin-top:12px;text-align:center;font-family:"Hanken Grotesk",sans-serif;}
+  figcaption b{color:var(--ink-soft);}
+  .t-epi{fill:#e9d2a8;} .t-cortex{fill:#dcecca;} .t-par{fill:#d6e9c9;}
+  .t-medula{fill:#eef4dc;} .t-xil{fill:#c05a33;} .t-flo{fill:#3f7d8c;}
+  .t-camb{fill:#6cb072;} .t-suber{fill:#8a5733;} .t-cerne{fill:#79532e;}
+  .t-alburno{fill:#cdab74;} .t-coifa{fill:#cfd9c0;} .t-tegu{fill:#9b7b4f;}
+  .t-endo{fill:#f0e2b6;} .t-cotil{fill:#cfe0b4;} .t-air{fill:#fbf7ee;}
+  .s-ink{stroke:#3a342b;} .s-soft{stroke:#7a6f5c;}
+  .lbl{font-family:"JetBrains Mono",monospace;font-size:11px;fill:#5d5546;}
+  .lbl-b{font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:600;fill:#272320;}
+  .lbl-t{font-family:"Fraunces",serif;font-size:14px;font-weight:600;fill:#2a5037;}
+  .ld{stroke:#9a9075;stroke-width:1;fill:none;}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin:14px 0 4px;justify-content:center;}
+  .legend span{display:inline-flex;align-items:center;gap:7px;font-size:.8rem;color:var(--ink-soft);font-family:"JetBrains Mono",monospace;}
+  .sw{width:13px;height:13px;border-radius:3px;border:1px solid rgba(0,0,0,.18);display:inline-block;}
+  .vs{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);margin:22px 0;}
+  .vs>div{padding:18px 20px;}
+  .vs .vs-a{background:var(--green-tint);border-right:1px solid var(--line);}
+  .vs .vs-b{background:#fbf6ed;}
+  .vs h5{margin:0 0 10px;font-family:"Fraunces",serif;font-size:1.1rem;color:var(--green-deep);font-weight:600;}
+  .vs .vs-b h5{color:var(--terra);}
+  .vs ul{margin:0;padding-left:18px;font-size:.93rem;}
+  @media(max-width:620px){.vs{grid-template-columns:1fr;}.vs .vs-a{border-right:0;border-bottom:1px solid var(--line);}}
+  .vid-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0;}
+  @media(max-width:680px){.vid-grid{grid-template-columns:1fr;}}
+  a.vid{display:flex;gap:14px;align-items:center;text-decoration:none;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow-sm);transition:transform .14s,box-shadow .14s,border-color .14s;}
+  a.vid:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:#d4c39e;}
+  .vid-ico{width:42px;height:42px;border-radius:11px;flex:none;background:linear-gradient(135deg,#c0392b,#e74c3c);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px -4px rgba(192,57,43,.5);}
+  .vid-ico svg{width:20px;height:20px;}
+  .vid-txt{min-width:0;}
+  .vid-txt .vt{font-weight:700;color:var(--ink);font-size:.97rem;line-height:1.25;display:block;}
+  .vid-txt .vm{font-family:"JetBrains Mono",monospace;font-size:.72rem;color:var(--ink-faint);margin-top:3px;}
+  .recap{background:var(--green-deep);color:#eef0e6;border-radius:var(--radius);padding:26px 26px 22px;margin:22px 0;box-shadow:var(--shadow);}
+  .recap h3{color:#fff;margin-top:0;}
+  .recap strong{color:#fff;}
+  .recap ul{padding-left:20px;}
+  .recap li{margin:8px 0;color:#e1e6d8;}
+  .recap li::marker{color:var(--amber);}
+  .flash{display:grid;grid-template-columns:auto 1fr;gap:0 16px;align-items:start;border-top:1px solid var(--line-soft);padding:13px 0;}
+  .flash:first-of-type{border-top:0;}
+  .flash .q{font-weight:700;color:var(--green-deep);font-family:"Fraunces",serif;font-size:1.02rem;}
+  .flash .qn{font-family:"JetBrains Mono",monospace;color:var(--amber);font-weight:700;font-size:.85rem;padding-top:3px;}
+  .flash .a{grid-column:2;color:var(--ink-soft);font-size:.96rem;}
+  footer{margin-top:60px;border-top:1px solid var(--line);background:var(--bg-alt);}
+  .foot-inner{max-width:var(--maxw);margin:0 auto;padding:34px 22px 46px;color:var(--ink-faint);font-size:.86rem;}
+  .foot-inner b{color:var(--ink-soft);}
+  .foot-inner .fl{display:flex;align-items:center;gap:9px;font-family:"Fraunces",serif;font-size:1.05rem;color:var(--green-deep);font-weight:600;margin-bottom:8px;}
+  .totop{position:fixed;right:20px;bottom:20px;z-index:90;width:44px;height:44px;border-radius:50%;background:var(--green);color:#fff;border:0;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;}
+  .totop.show{opacity:1;pointer-events:auto;}
+  .totop:hover{transform:translateY(-2px);}
+  @media print{
+    nav,#progress,.totop,.hero-art{display:none!important;}
+    body{background:#fff;font-size:11pt;}
+    section{padding:14px 0;}
+    .card,.fig-box,.tbl-wrap,a.vid,.callout,.vs,.recap{box-shadow:none;break-inside:avoid;}
+    .recap{background:#fff;color:#000;border:1.5px solid #333;}
+    .recap h3,.recap strong,.recap li{color:#000;}
+    thead th{background:#ddd!important;color:#000;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    h2.sec{break-after:avoid;}
+    a[href^="http"]::after{content:" (" attr(href) ")";font-size:8pt;color:#666;word-break:break-all;}
+  }
+  @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;}}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<nav>
+  <div class="nav-inner">
+    <span class="nav-brand">
+      <svg class="leaf" viewBox="0 0 24 24" fill="none"><path d="M5 19C5 11 11 5 19 5c0 8-6 14-14 14Z" fill="#3a6b48"/><path d="M5 19C8.5 14 12 11 16 9" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/></svg>
+      Anatomia Vegetal
+    </span>
+    <div class="nav-links" id="navlinks">
+      <a href="#visao">Visão geral</a>
+      <a href="#semente">Semente</a>
+      <a href="#meristemas">Meristemas</a>
+      <a href="#tecidos1">Tecidos 1º</a>
+      <a href="#secundario">Crescimento 2º</a>
+      <a href="#raiz">Raiz</a>
+      <a href="#caule">Caule</a>
+      <a href="#folha">Folha</a>
+      <a href="#pegadinhas">Pegadinhas</a>
+      <a href="#prova">Cai na prova</a>
+      <a href="#videos">Vídeos</a>
+      <a href="#revisao">Revisão</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <svg class="hero-art" viewBox="0 0 300 320" fill="none" aria-hidden="true">
+    <path d="M150 320 L150 150" stroke="#3a6b48" stroke-width="6" stroke-linecap="round"/>
+    <path d="M150 200 C110 190 95 160 92 130 C130 138 148 168 150 200Z" fill="#4a7d56"/>
+    <path d="M150 170 C190 160 205 130 208 100 C170 108 152 138 150 170Z" fill="#3a6b48"/>
+    <path d="M150 230 C112 222 98 196 96 170 C132 178 148 204 150 230Z" fill="#5a8f64"/>
+    <path d="M150 150 C158 120 188 104 214 102" stroke="#2a5037" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M150 150 C150 200 150 260 150 300 M150 230 C135 250 120 262 108 286 M150 245 C168 262 184 272 198 296 M150 270 C140 284 132 296 126 308 M150 270 C162 286 172 296 180 306" stroke="#b88a55" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".85"/>
+    <circle cx="150" cy="150" r="7" fill="#bd8521"/>
+  </svg>
+  <div class="hero-inner">
+    <div class="eyebrow">Biodiversidade · Aula 12 · Capítulos 6 e 7</div>
+    <h1>Anatomia e<br>Morfologia <em>Vegetal</em></h1>
+    <p class="sub">Da semente que germina à árvore que engrossa: como uma planta se constrói célula por célula. Meristemas, tecidos, e a anatomia comparada de raiz, caule e folha — em monocotiledôneas e eudicotiledôneas.</p>
+    <div class="hero-meta">
+      <span class="chip">Prof. <b>Croti</b> &amp; <b>Vânia</b></span>
+      <span class="chip">2ª série · Ensino Médio</span>
+      <span class="chip"><b>9</b> diagramas comentados</span>
+      <span class="chip">Foco <b>FUVEST</b></span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- 1. VISAO GERAL -->
+<section id="visao">
+  <h2 class="sec"><span class="num">01</span> Visão geral</h2>
+  <p class="sec-lead">Antes de mergulhar nas células, fixe o mapa grande. Uma planta com flores (angiosperma) tem <strong>três órgãos vegetativos</strong> — raiz, caule e folha — e três órgãos reprodutivos (flor, fruto, semente). Esta aula estuda como esses órgãos são <em class="term">construídos por dentro</em>.</p>
+
+  <figure>
+    <div class="fig-box">
+      <svg viewBox="0 0 720 300" role="img" aria-label="Os três órgãos vegetativos e suas funções">
+        <rect x="40" y="190" width="360" height="92" rx="6" fill="#e7dcc6"/>
+        <rect x="40" y="190" width="360" height="10" fill="#8fae5f"/>
+        <rect x="208" y="70" width="14" height="130" rx="7" fill="#5a8f64"/>
+        <path d="M215 110 C175 100 158 72 156 44 C196 52 214 82 215 110Z" fill="#4a7d56"/>
+        <path d="M215 95 C255 85 272 57 274 29 C234 37 216 67 215 95Z" fill="#3a6b48"/>
+        <path d="M215 140 C180 132 165 108 163 84 C198 92 214 116 215 140Z" fill="#5a8f64"/>
+        <path d="M215 200 C215 230 215 262 215 276 M215 224 C198 244 184 256 172 272 M215 236 C232 252 248 262 262 276 M215 252 C205 264 198 272 192 280" stroke="#b88a55" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <line x1="276" y1="36" x2="430" y2="36" class="ld"/><circle cx="276" cy="36" r="3" fill="#3a6b48"/>
+        <text x="438" y="32" class="lbl-t">Folha</text>
+        <text x="438" y="50" class="lbl">fotossíntese · transpiração</text>
+        <text x="438" y="64" class="lbl">· trocas gasosas</text>
+        <line x1="222" y1="135" x2="430" y2="135" class="ld"/><circle cx="222" cy="135" r="3" fill="#3a6b48"/>
+        <text x="438" y="131" class="lbl-t">Caule</text>
+        <text x="438" y="149" class="lbl">condução de seiva · sustentação</text>
+        <line x1="215" y1="250" x2="430" y2="232" class="ld"/><circle cx="215" cy="250" r="3" fill="#b88a55"/>
+        <text x="438" y="228" class="lbl-t">Raiz</text>
+        <text x="438" y="246" class="lbl">fixação ao substrato · absorção</text>
+        <text x="438" y="260" class="lbl">de água e sais minerais</text>
+      </svg>
+    </div>
+    <figcaption>Os três <b>órgãos vegetativos</b> e suas funções. Reproduzido da aula (slide de abertura).</figcaption>
+  </figure>
+
+  <h3>O fio condutor da aula: de onde vem cada tecido</h3>
+  <p>A planta inteira começa como uma bolinha de células iguais. A grande pergunta da histologia vegetal é: <strong>como células idênticas viram raiz, caule, folha, casca e madeira?</strong> A resposta é uma sequência lógica que vale a pena decorar como espinha dorsal:</p>
+  <div class="card" style="background:var(--green-tint);border-color:#cfe2c5;">
+    <p style="margin-bottom:0;font-size:1.04rem;text-align:center;font-family:'Fraunces',serif;">
+      Semente → <strong>Meristema apical</strong> → Meristemas primários → Tecidos primários<br>
+      <span style="color:var(--ink-faint);">(e, em algumas plantas)</span> → <strong>Meristemas secundários</strong> → Tecidos secundários
+    </p>
+  </div>
+  <p>Cada seta dessa cadeia é uma seção desta aula. Guarde duas ideias-chave que vão se repetir:</p>
+  <ul>
+    <li><strong>Crescimento primário</strong> = a planta cresce em <em class="term">comprimento</em> (alonga). Quem comanda: <strong>meristemas apicais</strong>.</li>
+    <li><strong>Crescimento secundário</strong> = a planta cresce em <em class="term">espessura</em> (engrossa). Quem comanda: <strong>meristemas secundários (laterais)</strong> — câmbio e felogênio.</li>
+  </ul>
+</section>
+
+<hr class="rule">
+
+<!-- 2. SEMENTE -->
+<section id="semente">
+  <h2 class="sec"><span class="num">02</span> A planta em desenvolvimento: a semente</h2>
+  <p class="sec-lead">Tudo começa na <strong>semente</strong> — um embrião protegido e abastecido, esperando a hora de germinar. Saber nomear suas partes e distinguir os três tipos é matéria certa de prova.</p>
+
+  <h3>Anatomia da semente</h3>
+  <div class="grid2">
+    <div class="card">
+      <h4 style="margin-top:0;">O envelope e o estoque</h4>
+      <ul style="margin-bottom:0;">
+        <li><strong>Tegumento</strong> — a "casca" da semente. Protege o embrião contra choque, dessecação e patógenos.</li>
+        <li><strong>Endosperma</strong> — tecido nutritivo. É o "lanche" que alimenta o embrião até ele virar uma plântula capaz de fotossintetizar.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4 style="margin-top:0;">O embrião (a futura planta)</h4>
+      <ul style="margin-bottom:0;">
+        <li><strong>Caulículo</strong> → dará origem ao <em class="term">caule</em>.</li>
+        <li><strong>Radícula</strong> → dará origem à <em class="term">raiz</em>.</li>
+        <li><strong>Cotilédone(s)</strong> → as primeiras "folhas" do embrião; nutrem e/ou armazenam reservas.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout co-comp">
+    <div class="co-h"><svg class="ic" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/><path d="M8 5v3.5M8 11h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Complemento para melhor compreensão</div>
+    <p>O endosperma das angiospermas é <strong>triploide (3n)</strong>. Ele surge da <strong>dupla fecundação</strong>: um núcleo espermático fecunda a oosfera (formando o embrião, 2n) e o outro funde-se a dois núcleos polares (formando o endosperma, 3n). Esse "3n" é uma pegadinha clássica de FUVEST/UNICAMP.</p>
+  </div>
+
+  <h3>Os três tipos de semente</h3>
+  <p>O critério é simples: <strong>quantos cotilédones?</strong> e <strong>o endosperma ainda está presente na semente madura?</strong></p>
+
+  <figure>
+    <div class="fig-box">
+      <svg viewBox="0 0 720 300" role="img" aria-label="Sementes de monocotiledônea, dicotiledônea albuminada e exalbuminada">
+        <!-- monocot -->
+        <g transform="translate(20,30)">
+          <path d="M60 10 C95 10 118 70 108 150 C103 195 80 215 60 222 C40 215 22 180 20 130 C18 70 28 10 60 10Z" class="t-endo s-ink" stroke-width="2.2"/>
+          <path d="M48 70 C44 100 44 130 48 160 C58 158 62 120 60 96 C59 84 56 74 48 70Z" class="t-cotil s-soft" stroke-width="1.2"/>
+          <rect x="50" y="96" width="7" height="40" rx="3" class="t-par s-soft" stroke-width="1"/>
+          <circle cx="53.5" cy="100" r="4" fill="#5a8f64"/>
+          <circle cx="53.5" cy="132" r="4.5" fill="#b88a55"/>
+          <line x1="96" y1="40" x2="150" y2="34" class="ld"/><text x="154" y="38" class="lbl-b">Tegumento</text>
+          <line x1="88" y1="120" x2="150" y2="120" class="ld"/><text x="154" y="124" class="lbl-b">Endosperma</text>
+          <line x1="51" y1="80" x2="150" y2="78" class="ld"/><text x="154" y="82" class="lbl-b">Cotilédone (1)</text>
+          <line x1="53" y1="100" x2="14" y2="86" class="ld"/><text x="10" y="82" class="lbl" text-anchor="end">Caulículo</text>
+          <line x1="53" y1="132" x2="14" y2="158" class="ld"/><text x="10" y="162" class="lbl" text-anchor="end">Radícula</text>
+          <text x="64" y="252" class="lbl-t" text-anchor="middle">Monocotiledônea</text>
+          <text x="64" y="270" class="lbl" text-anchor="middle">1 cotilédone · com endosperma</text>
+        </g>
+        <!-- dicot albuminada -->
+        <g transform="translate(255,8)">
+          <ellipse cx="120" cy="120" rx="100" ry="88" class="t-endo s-ink" stroke-width="2.2"/>
+          <path d="M120 120 C92 110 74 82 68 54 C102 64 116 92 120 120Z" class="t-cotil s-soft" stroke-width="1.1"/>
+          <path d="M120 120 C148 110 166 82 172 54 C138 64 124 92 120 120Z" class="t-cotil s-soft" stroke-width="1.1"/>
+          <rect x="116" y="106" width="8" height="42" rx="4" class="t-par s-soft" stroke-width="1"/>
+          <circle cx="120" cy="110" r="4.5" fill="#5a8f64"/>
+          <circle cx="120" cy="144" r="5" fill="#b88a55"/>
+          <line x1="196" y1="58" x2="232" y2="50" class="ld"/><text x="236" y="54" class="lbl-b">Tegumento</text>
+          <line x1="160" y1="150" x2="232" y2="158" class="ld"/><text x="236" y="162" class="lbl-b">Endosperma</text>
+          <line x1="150" y1="80" x2="232" y2="100" class="ld"/><text x="236" y="104" class="lbl-b">Cotilédone (2)</text>
+          <text x="120" y="234" class="lbl-t" text-anchor="middle">Dicot. albuminada</text>
+          <text x="120" y="252" class="lbl" text-anchor="middle">2 cotilédones · COM endosperma</text>
+        </g>
+      </svg>
+    </div>
+  </figure>
+
+  <figure>
+    <div class="fig-box">
+      <svg viewBox="0 0 720 260" role="img" aria-label="Semente de dicotiledônea exalbuminada">
+        <g transform="translate(140,8)">
+          <ellipse cx="120" cy="118" rx="100" ry="88" class="t-cotil s-ink" stroke-width="2.2"/>
+          <path d="M120 30 L120 206" class="s-ink" stroke-width="1.4"/>
+          <rect x="116" y="100" width="8" height="46" rx="4" class="t-par s-soft" stroke-width="1"/>
+          <circle cx="120" cy="106" r="5" fill="#5a8f64"/>
+          <circle cx="120" cy="140" r="5.5" fill="#b88a55"/>
+          <line x1="196" y1="56" x2="300" y2="46" class="ld"/><text x="306" y="50" class="lbl-b">Tegumento</text>
+          <line x1="150" y1="86" x2="300" y2="100" class="ld"/><text x="306" y="104" class="lbl-b">Cotilédone volumoso</text>
+          <text x="306" y="118" class="lbl">(armazena a reserva)</text>
+          <line x1="120" y1="106" x2="58" y2="100" class="ld"/><text x="54" y="96" class="lbl" text-anchor="end">Caulículo</text>
+          <line x1="120" y1="140" x2="58" y2="162" class="ld"/><text x="54" y="166" class="lbl" text-anchor="end">Radícula</text>
+          <text x="120" y="234" class="lbl-t" text-anchor="middle">Dicotiledônea exalbuminada · 2 cotilédones · SEM endosperma</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>Os <b>três tipos de semente</b> da aula. A diferença-chave: na exalbuminada, os cotilédones engordaram e <b>absorveram</b> todo o endosperma.</figcaption>
+  </figure>
+
+  <div class="callout co-def">
+    <div class="co-h"><svg class="ic" viewBox="0 0 16 16" fill="none"><path d="M3 2h7l3 3v9H3z" stroke="currentColor" stroke-width="1.3"/><path d="M10 2v3h3M6 8h4M6 11h4" stroke="currentColor" stroke-width="1.2"/></svg>Albuminada × Exalbuminada</div>
+    <p><strong>Albuminada (endospérmica):</strong> mantém o endosperma na semente madura; a reserva fica no endosperma. Ex.: milho, mamona, trigo.<br>
+    <strong>Exalbuminada (não-endospérmica):</strong> o embrião <strong>absorve o endosperma</strong> durante o desenvolvimento, e a reserva passa para os <strong>cotilédones</strong> (que ficam grandes e carnudos). Ex.: feijão, ervilha, amendoim.</p>
+  </div>
+
+  <div class="callout co-comp">
+    <div class="co-h"><svg class="ic" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/><path d="M8 5v3.5M8 11h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Complemento — germinação (costuma cair junto)</div>
+    <p>Na <strong>germinação epígea</strong> (ex.: feijão), os cotilédones são erguidos acima do solo pelo hipocótilo. Na <strong>germinação hipógea</strong> (ex.: milho, ervilha), permanecem enterrados. A radícula é sempre a primeira a romper o tegumento.</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- 3. MERISTEMAS -->
+<section id="meristemas">
+  <h2 class="sec"><span class="num">03</span> Meristemas: as células-tronco da planta</h2>
+  <p class="sec-lead">Meristema é o tecido formado por células <strong>indiferenciadas</strong> que se dividem por mitose e dão origem a todos os outros tecidos. É o motor do crescimento. Existem meristemas <strong>apicais</strong> (nas pontas), <strong>primários</strong> e <strong>secundários</strong>.</p>
+
+  <h3>3.1 — Meristemas apicais</h3>
+  <p>Ficam nas <strong>extremidades</strong> da raiz (protegidos pela coifa) e do caule (nas gemas). Promovem o <strong>crescimento primário</strong> (em comprimento). Reconhecê-los ao microscópio cai bastante — memorize as 5 características:</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th style="width:55%;">Característica do meristema apical</th><th>Por que é assim</th></tr></thead>
+      <tbody>
+        <tr><td class="name">1. Parede celular delgada</td><td>célula jovem, ainda sem reforço de lignina ou celulose espessa</td></tr>
+        <tr><td class="name">2. Núcleo volumoso</td><td>muita atividade genética; o núcleo ocupa grande parte da célula</td></tr>
+        <tr><td class="name">3. Citoplasma pouco volumoso</td><td>célula <strong>indiferenciada</strong> — sem grandes vacúolos ou organelas especializadas</td></tr>
+        <tr><td class="name">4. Nucléolos bem evidentes</td><td>intensa produção de ribossomos para sintetizar proteínas</td></tr>
+        <tr><td class="name">5. Mitoses frequentes</td><td>divisão constante: é daqui que saem as células novas</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:.95rem;color:var(--ink-soft);"><strong>Função:</strong> formar novas células → crescimento.</p>
+
+  <figure>
+    <div class="fig-box">
+      <svg viewBox="0 0 720 230" role="img" aria-label="Célula meristemática esquemática">
+        <g transform="translate(40,20)">
+          <rect x="0" y="0" width="170" height="190" rx="10" class="t-par s-ink" stroke-width="1.6"/>
+          <circle cx="85" cy="95" r="62" fill="#cfe0b4" class="s-ink" stroke-width="1.4"/>
+          <circle cx="85" cy="95" r="20" fill="#7a9a52"/>
+          <circle cx="85" cy="95" r="9" fill="#3a6b48"/>
+          <line x1="155" y1="14" x2="240" y2="14" class="ld"/><text x="246" y="18" class="lbl-b">Parede celular delgada</text>
+          <line x1="140" y1="60" x2="240" y2="50" class="ld"/><text x="246" y="54" class="lbl-b">Núcleo volumoso</text>
+          <line x1="100" y1="95" x2="240" y2="100" class="ld"/><text x="246" y="104" class="lbl-b">Nucléolo evidente</text>
+          <line x1="40" y1="150" x2="240" y2="150" class="ld"/><text x="246" y="146" class="lbl-b">Citoplasma reduzido</text>
+          <text x="246" y="164" class="lbl">(célula indiferenciada)</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>Esquema da <b>célula meristemática</b> (item 18 do gabarito). Compare com a foto de raiz da apostila: várias células em mitose ao mesmo tempo.</figcaption>
+  </figure>
+
+  <div class="callout co-vest">
+    <div class="co-h"><svg class="ic" viewBox="0 0 16 16" fill="none"><path d="M8 1l2 4.5 5 .5-3.7 3.4 1 5L8 11.5 3.7 14l1-5L1 6l5-.5z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>O que a foto da apostila mostra</div>
+    <p>A fotomicrografia de meristema apical (raiz de cebola é o clássico) mostra <strong>várias células em mitose simultaneamente</strong> — você vê cromossomos condensados em diferentes fases (prófase, metáfase, anáfase, telófase). É a prova visual da característica nº 5. Bancas adoram pedir "identifique a fase da mitose" nessas imagens.</p>
+  </div>
+
+  <h3>3.2 — Meristemas primários e o que cada um origina</h3>
+  <p>Logo atrás do meristema apical, as células começam a se especializar em <strong>três meristemas primários</strong>. Esta associação é uma das questões mais cobradas de todo o assunto:</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Meristema primário</th><th>Característica</th><th>Origina (função)</th></tr></thead>
+      <tbody>
+        <tr><td class="name">Protoderma</td><td>discreto espessamento da parede</td><td>a <strong>epiderme</strong> (revestimento)</td></tr>
+        <tr><td class="name">Meristema fundamental</td><td>células em diversos processos de diferenciação</td><td>todos os demais tecidos <strong>exceto</strong> epiderme e condutores — ou seja, <strong>parênquima, colênquima, esclerênquima</strong></td></tr>
+        <tr><td class="name">Procâmbio</td><td>células em alongamento e espessamento</td><td>vasos condutores (<strong>xilema e floema primários</strong>) e o <strong>câmbio fascicular</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout co-vest">
+    <div class="co-h"><svg class="ic" viewBox="0 0 16 16" fill="none"><path d="M8 1l2 4.5 5 .5-3.7 3.4 1 5L8 11.5 3.7 14l1-5L1 6l5-.5z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>Macete para nunca mais errar</div>
+    <p><strong>Pro</strong>toderma → epiderme (revestimento, fica "por fora"). <strong>Pro</strong>câmbio → condução (vasos). <strong>Fundamental</strong> → o "fundo/recheio" (parênquima, colênquima, esclerênquima). Pense: <em>"o procâmbio prepara os canos; o fundamental preenche; a protoderma forra."</em></p>
+  </div>
+
+  <h3>3.3 — O fluxograma completo (decore este desenho)</h3>
+  <figure>
+    <div class="fig-box">
+      <svg viewBox="0 0 720 470" role="img" aria-label="Fluxograma da origem dos tecidos a partir dos meristemas">
+        <defs><marker id="arr" markerWidth="9" markerHeight="9" refX="6" refY="4.5" orient="auto"><path d="M1 1L7 4.5L1 8Z" fill="#7a6f5c"/></marker></defs>
+        <rect x="270" y="12" width="180" height="46" rx="10" fill="#3a6b48"/>
+        <text x="360" y="33" text-anchor="middle" font-family="Fraunces,serif" font-size="15" font-weight="600" fill="#fff">Meristema apical</text>
+        <text x="360" y="50" text-anchor="middle" class="lbl" fill="#d9e6d3">(células indiferenciadas)</text>
+        <line x1="360" y1="58" x2="130" y2="92" class="ld" marker-end="url(#arr)"/>
+        <line x1="360" y1="58" x2="360" y2="92" class="ld" marker-end="url(#arr)"/>
+        <line x1="360" y1="58" x2="595" y2="92" class="ld" marker-end="url(#arr)"/>
+        <g font-family="Hanken Grotesk,sans-serif">
+          <rect x="40" y="96" width="180" height="40" rx="9" fill="#e7f0e3" stroke="#bcd6b0"/><text x="130" y="121" text-anchor="middle" font-size="13.5" font-weight="700" fill="#2a5037">Protoderma</text>
+          <rect x="270" y="96" width="180" height="40" rx="9" fill="#e7f0e3" stroke="#bcd6b0"/><text x="360" y="116" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2a5037">Meristema</text><text x="360" y="130" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2a5037">fundamental</text>
+          <rect x="500" y="96" width="180" height="40" rx="9" fill="#e7f0e3" stroke="#bcd6b0"/><text x="590" y="121" text-anchor="middle" font-size="13.5" font-weight="700" fill="#2a5037">Procâmbio</text>
+        </g>
+        <line x1="130" y1="136" x2="130" y2="168" class="ld" marker-end="url(#arr)"/>
+        <line x1="360" y1="136" x2="360" y2="168" class="ld" marker-end="url(#arr)"/>
+        <line x1="590" y1="136" x2="590" y2="168" class="ld" marker-end="url(#arr)"/>
+        <g font-family="Hanken Grotesk,sans-serif" font-size="12">
+          <rect x="55" y="172" width="150" height="34" rx="8" class="t-epi" stroke="#3a342b" stroke-width=".6"/><text x="130" y="194" text-anchor="middle" font-weight="700" fill="#5a4326">Epiderme</text>
+          <rect x="282" y="172" width="156" height="58" rx="8" class="t-par" stroke="#3a342b" stroke-width=".6"/><text x="360" y="190" text-anchor="middle" font-weight="700" fill="#3a5a2c">Parênquima ·</text><text x="360" y="206" text-anchor="middle" font-weight="700" fill="#3a5a2c">Colênquima ·</text><text x="360" y="221" text-anchor="middle" font-weight="700" fill="#3a5a2c">Esclerênquima</text>
+          <rect x="515" y="172" width="150" height="34" rx="8" fill="#e6dccb" stroke="#3a342b" stroke-width=".6"/><text x="590" y="190" text-anchor="middle" font-weight="700" fill="#7c5a44" font-size="11.5">Xilema 1º · Floema 1º</text><text x="590" y="201" text-anchor="middle" fill="#7c5a44" font-size="10">+ câmbio fascicular</text>
+        </g>
+        <line x1="40" y1="258" x2="680" y2="258" stroke="#e4d9c3" stroke-width="1" stroke-dasharray="4 5"/>
+        <text x="40" y="278" class="lbl" fill="#8b8270">CRESCIMENTO SECUNDÁRIO (gimnospermas e eudicotiledôneas)</text>
+        <g font-family="Hanken Grotesk,sans-serif">
+          <rect x="120" y="292" width="200" height="40" rx="9" fill="#fbeede" stroke="#e3c39f"/><text x="220" y="310" text-anchor="middle" font-size="12.5" font-weight="700" fill="#a8501f">Câmbio (vascular)</text><text x="220" y="324" text-anchor="middle" font-size="10.5" fill="#a8501f">fascicular + interfascicular</text>
+          <rect x="400" y="292" width="200" height="40" rx="9" fill="#fbeede" stroke="#e3c39f"/><text x="500" y="316" text-anchor="middle" font-size="13" font-weight="700" fill="#a8501f">Felogênio</text>
+        </g>
+        <line x1="220" y1="332" x2="220" y2="364" class="ld" marker-end="url(#arr)"/>
+        <line x1="500" y1="332" x2="430" y2="364" class="ld" marker-end="url(#arr)"/>
+        <line x1="500" y1="332" x2="570" y2="364" class="ld" marker-end="url(#arr)"/>
+        <g font-family="Hanken Grotesk,sans-serif" font-size="12">
+          <rect x="120" y="368" width="200" height="50" rx="8" fill="#e6dccb" stroke="#3a342b" stroke-width=".6"/><text x="220" y="388" text-anchor="middle" font-weight="700" fill="#7c5a44" font-size="11.5">Xilema 2º (lenho/madeira)</text><text x="220" y="405" text-anchor="middle" font-weight="700" fill="#2f6975" font-size="11.5">Floema 2º</text>
+          <rect x="360" y="368" width="135" height="50" rx="8" class="t-par" stroke="#3a342b" stroke-width=".6"/><text x="427" y="397" text-anchor="middle" font-weight="700" fill="#3a5a2c">Feloderme</text>
+          <rect x="510" y="368" width="120" height="50" rx="8" fill="#d8c2a8" stroke="#3a342b" stroke-width=".6"/><text x="570" y="392" text-anchor="middle" font-weight="700" fill="#6e4a28">Súber</text><text x="570" y="406" text-anchor="middle" fill="#6e4a28" font-size="10">(cortiça)</text>
+        </g>
+        <text x="495" y="437" text-anchor="middle" class="lbl" fill="#8b8270">feloderme = "para dentro" · súber = "para fora"</text>
+        <text x="185" y="437" text-anchor="middle" class="lbl" fill="#8b8270">câmbio: xilema p/ dentro · floema p/ fora</text>
+      </svg>
+    </div>
+    <figcaption>O <b>mapa-mestre</b> da histologia vegetal. Se você decorar só uma figura desta aula, decore esta.</figcaption>
+  </figure>
+</section>
+
+<hr class="rule">
+<!-- 4. TECIDOS PRIMARIOS -->
+<section id="tecidos1">
+  <h2 class="sec"><span class="num">04</span> Tecidos primários (permanentes)</h2>
+  <p class="sec-lead">São os tecidos já especializados, formados a partir dos meristemas primários. Aqui mora a maior concentração de pegadinhas da aula — principalmente sobre <strong>células vivas × mortas</strong> e <strong>celulose × lignina</strong>.</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Tecido</th><th>Características</th><th>Função</th></tr></thead>
+      <tbody>
+        <tr><td class="name">Epiderme <span class="pill pill-viva">viva</span></td><td>Células vivas, parede espessa; pode ter pelos absorventes, cutícula de cera e estômatos.</td><td>Revestimento, proteção, absorção e controle da transpiração.</td></tr>
+        <tr><td class="name">Esclerênquima <span class="pill pill-morta">morto</span> <span class="pill pill-lig">lignina</span></td><td>Células mortas, totalmente preenchidas por material de resistência (lignina).</td><td>Resistência e sustentação (tecido rígido).</td></tr>
+        <tr><td class="name">Colênquima <span class="pill pill-viva">vivo</span> <span class="pill pill-cel">celulose</span></td><td>Células vivas, parede reforçada por espessa camada de celulose.</td><td>Resistência <strong>e flexibilidade</strong> (sustenta partes jovens).</td></tr>
+        <tr><td class="name">Parênquima <span class="pill pill-viva">vivo</span></td><td>Vários tipos, cada um com especializações (vacúolos, cloroplastos, amiloplastos…).</td><td>Preenchimento, reserva ou funções metabólicas específicas.</td></tr>
+        <tr><td class="name">Protoxilema <span class="pill pill-morta">morto</span> <span class="pill pill-lig">lignina</span></td><td>Células alongadas, mortas, diâmetro <strong>muito grande</strong>, parede muito reforçada com lignina.</td><td>Condução de seiva bruta (inorgânica).</td></tr>
+        <tr><td class="name">Xilema primário <span class="pill pill-morta">morto</span> <span class="pill pill-lig">lignina</span></td><td>Células alongadas, mortas, diâmetro <strong>menor</strong> que o protoxilema, parede com lignina.</td><td>Condução de seiva bruta (inorgânica).</td></tr>
+        <tr><td class="name">Floema primário <span class="pill pill-viva">vivo</span> <span class="pill pill-cel">celulose</span></td><td>Células alongadas, vivas, diâmetro pequeno, parede espessa só de celulose.</td><td>Condução de seiva elaborada (orgânica).</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Os três grandes confrontos</h3>
+  <div class="vs">
+    <div class="vs-a">
+      <h5>Colênquima</h5>
+      <ul><li>células <strong>VIVAS</strong></li><li>parede de <strong>celulose</strong></li><li><strong>flexível</strong> — sustenta partes jovens que ainda crescem</li><li>ex.: os "fios" do talo do aipo</li></ul>
+    </div>
+    <div class="vs-b">
+      <h5>Esclerênquima</h5>
+      <ul><li>células <strong>MORTAS</strong></li><li>parede de <strong>lignina</strong></li><li><strong>rígido</strong> — sustenta partes maduras</li><li>ex.: casca dura da noz, "células pétreas" da pera</li></ul>
+    </div>
+  </div>
+
+  <div class="vs">
+    <div class="vs-a">
+      <h5>Xilema (lenho)</h5>
+      <ul><li>células <strong>MORTAS</strong>, com <strong>lignina</strong></li><li>conduz <strong>seiva bruta</strong> = água + sais (inorgânica)</li><li>sentido: <strong>raiz → folhas</strong> (sobe)</li><li>força: transpiração (tensão-coesão)</li></ul>
+    </div>
+    <div class="vs-b">
+      <h5>Floema (líber)</h5>
+      <ul><li>células <strong>VIVAS</strong>, com <strong>celulose</strong></li><li>conduz <strong>seiva elaborada</strong> = açúcares (orgânica)</li><li>sentido: <strong>folhas → resto da planta</strong></li><li>força: pressão de turgor (fluxo de massa)</li></ul>
+    </div>
+  </div>
+
+  <div class="callout co-comp">
+    <div class="co-h"><svg class="ic" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/><path d="M8 5v3.5M8 11h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Complemento — como a água sobe dezenas de metros</div>
+    <p>No xilema, a água sobe por <strong>coesão-tensão</strong>: a transpiração nas folhas "puxa" a coluna de água, que se mantém íntegra porque as moléculas de água se atraem (pontes de hidrogênio = coesão) e aderem às paredes (adesão). Por isso as células do xilema podem estar <strong>mortas e ocas</strong> — são apenas tubos. Já o floema precisa de células <strong>vivas</strong> porque o transporte de açúcar gasta energia (carregamento ativo).</p>
+  </div>
+
+  <div class="callout co-warn">
+    <div class="co-h"><svg class="ic" viewBox="0 0 16 16" fill="none"><path d="M8 1.5L15 14H1z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M8 6.5v3.5M8 12h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Pegadinha das três substâncias de parede</div>
+    <p><strong>Celulose</strong> → colênquima e floema (células que precisam continuar vivas/flexíveis).<br>
+    <strong>Lignina</strong> → esclerênquima e xilema (rigidez; mata a célula).<br>
+    <strong>Suberina</strong> → súber/cortiça (impermeabilização). Trocar essas três é o erro nº 1 do tema.</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- 5. CRESCIMENTO SECUNDARIO -->
+<section id="secundario">
+  <h2 class="sec"><span class="num">05</span> Crescimento secundário: a planta engrossa</h2>
+  <p class="sec-lead">Plantas lenhosas (árvores, arbustos) não só crescem em altura — elas <strong>engordam</strong>. Isso é o crescimento secundário, comandado por dois meristemas laterais. Ocorre em <strong>gimnospermas e eudicotiledôneas</strong>; as monocotiledôneas, em geral, <strong>não têm</strong>.</p>
+
+  <h3>5.1 — Meristemas secundários</h3>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Meristema secundário</th><th>Origem</th><th>Produz</th></tr></thead>
+      <tbody>
+        <tr><td class="name">Câmbio fascicular</td><td>do <strong>procâmbio</strong></td><td>xilema e floema secundários</td></tr>
+        <tr><td class="name">Câmbio interfascicular</td><td>do <strong>meristema fundamental</strong></td><td>xilema e floema secundários</td></tr>
+        <tr><td class="name">Felogênio <span style="font-weight:400;color:var(--ink-faint);">(câmbio da casca)</span></td><td>do <strong>meristema fundamental</strong></td><td><strong>feloderme</strong> (parênquima, p/ dentro) e <strong>súber</strong> (revestimento, p/ fora)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>O câmbio fascicular + interfascicular juntos formam um <strong>anel contínuo</strong> (o câmbio vascular). Ele empurra xilema para dentro e floema para fora — ano após ano. É isso que engrossa o tronco e gera os <strong>anéis de crescimento</strong>.</p>
+
+  <h3>5.2 — Tecidos secundários</h3>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Tecido</th><th>Características</th><th>Função</th></tr></thead>
+      <tbody>
+        <tr><td class="name">Súber <span class="pill pill-morta">morto</span> <span class="pill pill-sub">suberina</span></td><td>células mortas, parede fortemente reforçada com <strong>suberina</strong></td><td>revestimento impermeável (a "cortiça")</td></tr>
+        <tr><td class="name">Feloderme <span class="pill pill-viva">vivo</span></td><td>tecido de preenchimento (parênquima)</td><td>preenchimento</td></tr>
+        <tr><td class="name">Xilema secundário <span class="pill pill-morta">morto</span> <span class="pill pill-lig">lignina</span></td><td>alongadas, mortas, parede com lignina</td><td>conduzir seiva bruta — acumula-se como <strong>madeira/lenho</strong></td></tr>
+        <tr><td class="name">Floema secundário <span class="pill pill-viva">vivo</span> <span class="pill pill-cel">celulose</span></td><td>alongadas, vivas, parede só de celulose</td><td>conduzir seiva elaborada (faz parte da casca)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>5.3 — A estrutura de um tronco</h3>
+  <figure>
+    <div class="fig-box">
+      <svg viewBox="0 0 850 300" role="img" aria-label="Camadas de um tronco em corte">
+        <g transform="translate(60,150)">
+          <path d="M-0 0 A300 145 0 0 1 600 0 Z" class="t-suber"/>
+          <path d="M14 0 A286 138 0 0 1 586 0 Z" class="t-par"/>
+          <path d="M26 0 A274 132 0 0 1 574 0 Z" class="t-flo"/>
+          <path d="M40 0 A260 125 0 0 1 560 0 Z" class="t-camb"/>
+          <path d="M50 0 A250 120 0 0 1 550 0 Z" class="t-alburno"/>
+          <path d="M150 0 A150 72 0 0 1 450 0 Z" class="t-cerne"/>
+          <path d="M90 0 A210 100 0 0 1 510 0" fill="none" stroke="#9a7b45" stroke-width="1" opacity=".5"/>
+          <path d="M120 0 A180 86 0 0 1 480 0" fill="none" stroke="#9a7b45" stroke-width="1" opacity=".5"/>
+          <path d="M180 0 A120 58 0 0 1 420 0" fill="none" stroke="#6e4a28" stroke-width="1" opacity=".5"/>
+          <path d="M210 0 A90 43 0 0 1 390 0" fill="none" stroke="#6e4a28" stroke-width="1" opacity=".5"/>
+          <line x1="-4" y1="0" x2="604" y2="0" stroke="#3a342b" stroke-width="1.4"/>
+        </g>
+        <line x1="300" y1="80" x2="640" y2="34" class="ld"/><text x="646" y="38" class="lbl-b">Súber (cortiça)</text>
+        <line x1="300" y1="92" x2="640" y2="56" class="ld"/><text x="646" y="60" class="lbl-b">Felogênio + feloderme</text>
+        <line x1="300" y1="106" x2="640" y2="78" class="ld"/><text x="646" y="82" class="lbl-b" fill="#2f6975">Floema (líber)</text>
+        <line x1="300" y1="120" x2="640" y2="100" class="ld"/><text x="646" y="104" class="lbl-b" fill="#3a6b48">Câmbio vascular</text>
+        <line x1="300" y1="135" x2="640" y2="122" class="ld"/><text x="646" y="126" class="lbl-b" fill="#8a6a36">Alburno (xilema funcional)</text>
+        <line x1="350" y1="148" x2="640" y2="144" class="ld"/><text x="646" y="148" class="lbl-b" fill="#6e4a28">Cerne (xilema antigo)</text>
+      </svg>
+    </div>
+    <figcaption>Corte de tronco (esquema 63–69 da apostila). Do centro para fora: <b>cerne → alburno → câmbio → floema → periderme</b>.</figcaption>
+  </figure>
+
+  <div class="grid2">
+    <div class="callout co-def" style="margin:0;">
+      <div class="co-h"><svg class="ic" viewBox="0 0 16 16" fill="none"><path d="M3 2h7l3 3v9H3z" stroke="currentColor" stroke-width="1.3"/></svg>Cerne × Alburno</div>
+      <p><strong>Cerne</strong> = xilema <strong>antigo e morto</strong>, no centro, escuro; já não conduz, só sustenta. <strong>Alburno</strong> = xilema <strong>mais jovem e funcional</strong>, claro, ao redor do cerne; é ele que ainda conduz a seiva bruta.</p>
+    </div>
+    <div class="callout co-def" style="margin:0;">
+      <div class="co-h"><svg class="ic" viewBox="0 0 16 16" fill="none"><path d="M3 2h7l3 3v9H3z" stroke="currentColor" stroke-width="1.3"/></svg>O que é a "casca"</div>
+      <p>A <strong>casca</strong> de uma árvore é tudo o que está <strong>por fora do câmbio</strong>: floema secundário + periderme (felogênio + súber + feloderme). Tirar um anel completo de casca interrompe o floema e pode matar a árvore (anelamento).</p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+<!-- 6. RAIZ -->
+<section id="raiz">
+  <h2 class="sec"><span class="num">06</span> Raiz</h2>
+  <p class="sec-lead">A raiz fixa a planta e <strong>absorve água e sais minerais</strong>. Estude-a em dois níveis: a morfologia externa (as zonas, de fora) e a anatomia interna (o corte transversal — onde mono e eudicot se diferenciam).</p>
+
+  <h3>6.1 — Morfologia externa: as zonas da raiz</h3>
+  <figure>
+    <div class="fig-box">
+      <svg viewBox="0 0 720 300" role="img" aria-label="Zonas da raiz">
+        <rect x="40" y="40" width="300" height="240" fill="#efe6cf"/>
+        <rect x="40" y="40" width="300" height="9" fill="#8fae5f"/>
+        <path d="M186 30 C198 30 206 60 206 90 C206 150 198 230 190 268 C188 274 182 274 180 268 C172 230 166 150 166 90 C166 60 174 30 186 30Z" fill="#cdaf80" stroke="#8a6a3e" stroke-width="1.4"/>
+        <path d="M180 252 C176 262 184 272 186 272 C188 272 196 262 192 252 C190 248 182 248 180 252Z" class="t-coifa" stroke="#6e7a5a" stroke-width="1.2"/>
+        <g stroke="#b88a55" stroke-width="1"><path d="M168 150 l-12 -4M168 158 l-13 1M168 166 l-12 5M204 150 l12 -4M204 158 l13 1M204 166 l12 5M168 174 l-12 -2M204 174 l12 -2"/></g>
+        <path d="M172 95 C150 92 138 100 124 110" stroke="#b88a55" stroke-width="2" fill="none"/>
+        <path d="M200 105 C222 104 236 114 250 124" stroke="#b88a55" stroke-width="2" fill="none"/>
+        <path d="M170 120 C150 122 140 132 130 142" stroke="#b88a55" stroke-width="1.8" fill="none"/>
+        <line x1="206" y1="55" x2="430" y2="50" class="ld"/><text x="436" y="46" class="lbl-t">Colo</text><text x="436" y="62" class="lbl">transição raiz↔caule</text>
+        <line x1="248" y1="118" x2="430" y2="100" class="ld"/><text x="436" y="96" class="lbl-t">Zona de ramificação</text><text x="436" y="112" class="lbl">(suberosa) — raízes laterais</text>
+        <line x1="216" y1="160" x2="430" y2="150" class="ld"/><text x="436" y="146" class="lbl-t">Zona pilífera</text><text x="436" y="162" class="lbl">pelos absorventes — ABSORÇÃO</text>
+        <line x1="206" y1="210" x2="430" y2="200" class="ld"/><text x="436" y="196" class="lbl-t">Zona de alongamento</text><text x="436" y="212" class="lbl">células se alongam</text>
+        <line x1="190" y1="262" x2="430" y2="252" class="ld"/><text x="436" y="248" class="lbl-t">Coifa</text><text x="436" y="264" class="lbl">protege o meristema apical</text>
+      </svg>
+    </div>
+    <figcaption>As cinco regiões da raiz (esquema 31–35). A <b>zona pilífera</b> é onde de fato ocorre a absorção.</figcaption>
+  </figure>
+  <ul>
+    <li><strong>Coifa</strong>: capacete de células que protege o meristema apical do atrito com o solo; também percebe a gravidade (geotropismo).</li>
+    <li><strong>Zona de alongamento</strong>: logo acima do meristema, as células recém-formadas se esticam — é o que empurra a raiz para baixo.</li>
+    <li><strong>Zona pilífera</strong>: coberta de <strong>pelos absorventes</strong> (expansões da epiderme). Aumentam muito a superfície de contato → é a <strong>região de absorção</strong>.</li>
+    <li><strong>Zona de ramificação</strong> (suberosa): saem as <strong>raízes laterais</strong> (originadas internamente, no periciclo).</li>
+    <li><strong>Colo</strong>: o ponto onde a raiz encontra o caule.</li>
+  </ul>
+
+  <h3>6.2 — Anatomia interna: raiz monocot × eudicot</h3>
+  <p>Esta é <strong>a</strong> figura de prova. No corte transversal da raiz, a disposição de xilema e floema denuncia o grupo da planta.</p>
+
+  <div class="legend">
+    <span><i class="sw" style="background:#e9d2a8"></i>Epiderme</span>
+    <span><i class="sw" style="background:#dcecca"></i>Parênquima (córtex)</span>
+    <span><i class="sw" style="background:#eef4dc"></i>Medula</span>
+    <span><i class="sw" style="background:#c05a33"></i>Xilema</span>
+    <span><i class="sw" style="background:#3f7d8c"></i>Floema</span>
+  </div>
+
+  <figure>
+    <div class="fig-box">
+      <svg viewBox="0 0 720 330" role="img" aria-label="Corte transversal de raiz monocot e eudicot">
+        <g transform="translate(165,150)">
+          <circle r="128" class="t-epi s-ink" stroke-width="1.6"/>
+          <circle r="118" class="t-cortex"/>
+          <circle r="62" class="t-medula s-soft" stroke-width="1"/>
+          <g fill="#c05a33" stroke="#7a3018" stroke-width=".5">
+            <path d="M0 -86 L9 -64 L-9 -64 Z"/><path d="M74 -43 L55 -50 L62 -33 Z"/><path d="M74 43 L62 33 L55 50 Z"/><path d="M0 86 L-9 64 L9 64 Z"/><path d="M-74 43 L-55 50 L-62 33 Z"/><path d="M-74 -43 L-62 -33 L-55 -50 Z"/>
+          </g>
+          <g fill="#3f7d8c">
+            <ellipse cx="40" cy="-72" rx="9" ry="9"/><ellipse cx="80" cy="0" rx="9" ry="9"/><ellipse cx="40" cy="72" rx="9" ry="9"/><ellipse cx="-40" cy="72" rx="9" ry="9"/><ellipse cx="-80" cy="0" rx="9" ry="9"/><ellipse cx="-40" cy="-72" rx="9" ry="9"/>
+          </g>
+          <text x="0" y="6" text-anchor="middle" class="lbl" fill="#7a8350">medula</text>
+        </g>
+        <text x="165" y="312" text-anchor="middle" class="lbl-t">Raiz de monocotiledônea</text>
+        <line x1="270" y1="100" x2="320" y2="90" class="ld"/><text x="324" y="86" class="lbl">epiderme</text>
+        <line x1="245" y1="78" x2="320" y2="118" class="ld"/><text x="324" y="122" class="lbl" fill="#c05a33">xilema (alternado)</text>
+        <line x1="232" y1="150" x2="320" y2="150" class="ld"/><text x="324" y="154" class="lbl" fill="#2f6975">floema (alternado)</text>
+        <g transform="translate(555,150)">
+          <circle r="128" class="t-epi s-ink" stroke-width="1.6"/>
+          <circle r="118" class="t-cortex"/>
+          <g fill="#c05a33" stroke="#7a3018" stroke-width=".6">
+            <path d="M0 0 L18 -78 L-18 -78 Z"/><path d="M0 0 L18 78 L-18 78 Z"/><path d="M0 0 L78 18 L78 -18 Z"/><path d="M0 0 L-78 18 L-78 -18 Z"/>
+          </g>
+          <circle r="14" fill="#c05a33"/>
+          <g fill="#3f7d8c"><ellipse cx="42" cy="-42" rx="11" ry="11"/><ellipse cx="42" cy="42" rx="11" ry="11"/><ellipse cx="-42" cy="42" rx="11" ry="11"/><ellipse cx="-42" cy="-42" rx="11" ry="11"/></g>
+        </g>
+        <text x="555" y="306" text-anchor="middle" class="lbl-t">Raiz de eudicotiledônea</text>
+        <text x="555" y="290" text-anchor="middle" class="lbl">xilema central em estrela · sem medula</text>
+      </svg>
+    </div>
+    <figcaption>Corte transversal da raiz (esquemas 36–46). <b>Mono</b>: xilema e floema alternados num anel, com <b>medula central</b>. <b>Eudicot</b>: xilema central em <b>estrela/cruz</b>, sem medula.</figcaption>
+  </figure>
+
+  <div class="vs">
+    <div class="vs-a">
+      <h5>Raiz monocotiledônea</h5>
+      <ul><li>xilema e floema <strong>alternados</strong> em anel (vários polos = poliarca)</li><li>tem <strong>medula</strong> (parênquima medular) no centro</li><li>sem crescimento secundário</li></ul>
+    </div>
+    <div class="vs-b">
+      <h5>Raiz eudicotiledônea</h5>
+      <ul><li>xilema <strong>central em estrela/cruz</strong> (poucos polos)</li><li><strong>sem medula</strong> (o xilema ocupa o centro)</li><li>floema fica entre os braços da estrela</li></ul>
+    </div>
+  </div>
+
+  <div class="callout co-warn">
+    <div class="co-h"><svg class="ic" viewBox="0 0 16 16" fill="none"><path d="M8 1.5L15 14H1z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M8 6.5v3.5M8 12h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>O ponto que separa raiz de caule</div>
+    <p>Na <strong>RAIZ</strong>, xilema e floema ficam em <strong>cordões separados e alternados</strong> (disposição radial). No <strong>CAULE</strong>, ficam <strong>juntos no mesmo feixe</strong> (colateral: floema fora, xilema dentro). Se a banca mostrar um corte e perguntar "raiz ou caule?", é a alternância × união que decide.</p>
+  </div>
+
+  <div class="callout co-comp">
+    <div class="co-h"><svg class="ic" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/><path d="M8 5v3.5M8 11h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Complemento — endoderme e periciclo (nível FUVEST)</div>
+    <p>Entre o córtex e o cilindro vascular há a <strong>endoderme</strong>, com as <strong>estrias de Caspary</strong> (faixas de suberina que obrigam a água a passar pelo interior das células, filtrando o que entra). Logo dentro vem o <strong>periciclo</strong>, camada que origina as <strong>raízes laterais</strong>. A Unicamp já cobrou "tecido 1 = xilema, tecido 2 = periciclo" em corte de raiz.</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- 7. CAULE -->
+<section id="caule">
+  <h2 class="sec"><span class="num">07</span> Caule</h2>
+  <p class="sec-lead">O caule <strong>sustenta</strong> folhas, flores e frutos e <strong>conduz</strong> seiva entre raiz e folhas. Como na raiz, estude morfologia externa + anatomia comparada.</p>
+
+  <h3>7.1 — Morfologia externa</h3>
+  <figure>
+    <div class="fig-box">
+      <svg viewBox="0 0 720 230" role="img" aria-label="Morfologia externa do caule">
+        <g transform="translate(150,0)">
+          <rect x="40" y="30" width="14" height="185" rx="7" fill="#5a8f64"/>
+          <circle cx="47" cy="30" r="13" fill="#3a6b48"/>
+          <path d="M47 18 C43 24 43 30 47 34 C51 30 51 24 47 18Z" fill="#5a8f64"/>
+          <ellipse cx="47" cy="92" rx="9" ry="5" fill="#3a6b48"/>
+          <path d="M54 92 C84 82 100 60 104 40 C76 48 60 70 54 92Z" fill="#4a7d56"/>
+          <circle cx="58" cy="88" r="6" fill="#2a5037"/>
+          <ellipse cx="47" cy="158" rx="9" ry="5" fill="#3a6b48"/>
+          <path d="M40 158 C10 148 -6 126 -10 106 C18 114 34 136 40 158Z" fill="#5a8f64"/>
+          <circle cx="36" cy="154" r="6" fill="#2a5037"/>
+          <line x1="47" y1="22" x2="320" y2="30" class="ld"/><text x="326" y="34" class="lbl-b">Gema apical</text><text x="326" y="48" class="lbl">crescimento em comprimento</text>
+          <line x1="58" y1="88" x2="320" y2="86" class="ld"/><text x="326" y="90" class="lbl-b">Gema lateral (axilar)</text><text x="326" y="104" class="lbl">novos ramos / folhas</text>
+          <line x1="47" y1="92" x2="320" y2="138" class="ld"/><text x="326" y="142" class="lbl-b">Nó</text><text x="326" y="156" class="lbl">ponto de inserção da folha</text>
+          <line x1="47" y1="125" x2="320" y2="186" class="ld"/><text x="326" y="190" class="lbl-b">Entrenó</text><text x="326" y="204" class="lbl">segmento entre dois nós</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>Partes externas do caule (esquema 47–50). A <b>gema apical</b> contém o meristema que alonga o caule; as <b>gemas laterais</b> geram ramos.</figcaption>
+  </figure>
+
+  <h3>7.2 — Anatomia interna: caule monocot × eudicot</h3>
+  <p>No caule, os feixes são <strong>colaterais</strong> (xilema e floema juntos). O que muda entre os grupos é <strong>a distribuição</strong> desses feixes.</p>
+
+  <div class="legend">
+    <span><i class="sw" style="background:#e9d2a8"></i>Epiderme</span>
+    <span><i class="sw" style="background:#d6e9c9"></i>Parênquima</span>
+    <span><i class="sw" style="background:#c05a33"></i>Xilema</span>
+    <span><i class="sw" style="background:#3f7d8c"></i>Floema</span>
+    <span><i class="sw" style="background:#6cb072"></i>Câmbio</span>
+  </div>
+
+  <figure>
+    <div class="fig-box">
+      <svg viewBox="0 0 800 330" role="img" aria-label="Corte transversal de caule monocot e eudicot">
+        <g transform="translate(165,150)">
+          <circle r="128" class="t-epi s-ink" stroke-width="1.6"/>
+          <circle r="118" class="t-par"/>
+          <g transform="translate(0,-80)"><ellipse rx="13" ry="16" fill="#3f7d8c"/><ellipse cy="6" rx="9" ry="9" fill="#c05a33"/></g>
+          <g transform="translate(60,-50)"><ellipse rx="12" ry="15" fill="#3f7d8c"/><ellipse cy="6" rx="8" ry="8" fill="#c05a33"/></g>
+          <g transform="translate(-58,-46)"><ellipse rx="12" ry="15" fill="#3f7d8c"/><ellipse cy="6" rx="8" ry="8" fill="#c05a33"/></g>
+          <g transform="translate(30,30)"><ellipse rx="12" ry="15" fill="#3f7d8c"/><ellipse cy="6" rx="8" ry="8" fill="#c05a33"/></g>
+          <g transform="translate(-36,24)"><ellipse rx="12" ry="15" fill="#3f7d8c"/><ellipse cy="6" rx="8" ry="8" fill="#c05a33"/></g>
+          <g transform="translate(78,12)"><ellipse rx="11" ry="14" fill="#3f7d8c"/><ellipse cy="6" rx="7" ry="7" fill="#c05a33"/></g>
+          <g transform="translate(-80,8)"><ellipse rx="11" ry="14" fill="#3f7d8c"/><ellipse cy="6" rx="7" ry="7" fill="#c05a33"/></g>
+          <g transform="translate(8,78)"><ellipse rx="12" ry="15" fill="#3f7d8c"/><ellipse cy="6" rx="8" ry="8" fill="#c05a33"/></g>
+          <g transform="translate(54,62)"><ellipse rx="11" ry="14" fill="#3f7d8c"/><ellipse cy="6" rx="7" ry="7" fill="#c05a33"/></g>
+          <g transform="translate(-58,58)"><ellipse rx="11" ry="14" fill="#3f7d8c"/><ellipse cy="6" rx="7" ry="7" fill="#c05a33"/></g>
+        </g>
+        <text x="165" y="312" text-anchor="middle" class="lbl-t">Caule de monocotiledônea</text>
+        <text x="165" y="296" text-anchor="middle" class="lbl">feixes DISPERSOS (atactostelo)</text>
+        <g transform="translate(555,150)">
+          <circle r="128" class="t-epi s-ink" stroke-width="1.6"/>
+          <circle r="118" class="t-par"/>
+          <circle r="56" class="t-medula s-soft" stroke-width=".8"/>
+          <g transform="rotate(0) translate(0,-86)"><ellipse rx="13" ry="13" fill="#3f7d8c"/><rect x="-13" y="-2" width="26" height="4" fill="#6cb072"/><ellipse cy="14" rx="11" ry="11" fill="#c05a33"/></g>
+          <g transform="rotate(60) translate(0,-86)"><ellipse rx="13" ry="13" fill="#3f7d8c"/><rect x="-13" y="-2" width="26" height="4" fill="#6cb072"/><ellipse cy="14" rx="11" ry="11" fill="#c05a33"/></g>
+          <g transform="rotate(120) translate(0,-86)"><ellipse rx="13" ry="13" fill="#3f7d8c"/><rect x="-13" y="-2" width="26" height="4" fill="#6cb072"/><ellipse cy="14" rx="11" ry="11" fill="#c05a33"/></g>
+          <g transform="rotate(180) translate(0,-86)"><ellipse rx="13" ry="13" fill="#3f7d8c"/><rect x="-13" y="-2" width="26" height="4" fill="#6cb072"/><ellipse cy="14" rx="11" ry="11" fill="#c05a33"/></g>
+          <g transform="rotate(240) translate(0,-86)"><ellipse rx="13" ry="13" fill="#3f7d8c"/><rect x="-13" y="-2" width="26" height="4" fill="#6cb072"/><ellipse cy="14" rx="11" ry="11" fill="#c05a33"/></g>
+          <g transform="rotate(300) translate(0,-86)"><ellipse rx="13" ry="13" fill="#3f7d8c"/><rect x="-13" y="-2" width="26" height="4" fill="#6cb072"/><ellipse cy="14" rx="11" ry="11" fill="#c05a33"/></g>
+          <circle r="70" fill="none" stroke="#6cb072" stroke-width="1.4" stroke-dasharray="4 5"/>
+          <text x="0" y="4" text-anchor="middle" class="lbl" fill="#7a8350">medula</text>
+        </g>
+        <text x="555" y="312" text-anchor="middle" class="lbl-t">Caule de eudicotiledônea</text>
+        <text x="555" y="296" text-anchor="middle" class="lbl">feixes em ANEL (eustelo)</text>
+        <line x1="555" y1="64" x2="640" y2="60" class="ld"/><text x="646" y="58" class="lbl" fill="#2f6975">floema (externo)</text>
+        <text x="646" y="72" class="lbl" fill="#3a6b48">câmbio fascicular</text>
+        <text x="646" y="86" class="lbl" fill="#c05a33">xilema (interno)</text>
+      </svg>
+    </div>
+    <figcaption>Corte transversal do caule (esquemas 51–62). <b>Mono</b>: feixes espalhados, sem câmbio → não engrossa. <b>Eudicot</b>: feixes em anel, com câmbio fascicular e interfascicular → crescimento secundário.</figcaption>
+  </figure>
+
+  <div class="vs">
+    <div class="vs-a">
+      <h5>Caule monocotiledônea</h5>
+      <ul><li>feixes vasculares <strong>dispersos</strong> no parênquima (atactostelo)</li><li><strong>sem câmbio</strong> → sem crescimento secundário típico</li><li>ex.: bambu, milho, palmeira</li></ul>
+    </div>
+    <div class="vs-b">
+      <h5>Caule eudicotiledônea</h5>
+      <ul><li>feixes organizados em <strong>anel</strong> (eustelo), em volta da medula</li><li>tem <strong>câmbio fascicular + interfascicular</strong> → engrossa</li><li>ex.: feijão, ipê, eucalipto</li></ul>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- 8. FOLHA -->
+<section id="folha">
+  <h2 class="sec"><span class="num">08</span> Folha</h2>
+  <p class="sec-lead">A folha é o principal órgão da <strong>fotossíntese</strong>, além de fazer transpiração e trocas gasosas. Seu corte transversal é um clássico de prova — cada camada tem uma função clara.</p>
+
+  <figure>
+    <div class="fig-box">
+      <svg viewBox="0 0 800 320" role="img" aria-label="Corte transversal da folha">
+        <rect x="60" y="40" width="500" height="10" rx="3" fill="#dfc98f"/>
+        <rect x="60" y="50" width="500" height="34" fill="#e9d2a8" stroke="#3a342b" stroke-width=".5"/>
+        <g stroke="#caa86f" stroke-width=".8"><path d="M110 50v34M160 50v34M210 50v34M260 50v34M310 50v34M360 50v34M410 50v34M460 50v34M510 50v34"/></g>
+        <rect x="60" y="84" width="500" height="70" fill="#cfe0b4"/>
+        <g fill="#bcd49a" stroke="#9bb874" stroke-width=".6">
+          <rect x="66" y="88" width="16" height="62" rx="6"/><rect x="90" y="88" width="16" height="62" rx="6"/><rect x="114" y="88" width="16" height="62" rx="6"/><rect x="138" y="88" width="16" height="62" rx="6"/><rect x="162" y="88" width="16" height="62" rx="6"/><rect x="186" y="88" width="16" height="62" rx="6"/><rect x="210" y="88" width="16" height="62" rx="6"/><rect x="234" y="88" width="16" height="62" rx="6"/><rect x="258" y="88" width="16" height="62" rx="6"/><rect x="282" y="88" width="16" height="62" rx="6"/><rect x="306" y="88" width="16" height="62" rx="6"/><rect x="330" y="88" width="16" height="62" rx="6"/><rect x="354" y="88" width="16" height="62" rx="6"/><rect x="378" y="88" width="16" height="62" rx="6"/><rect x="402" y="88" width="16" height="62" rx="6"/><rect x="426" y="88" width="16" height="62" rx="6"/><rect x="450" y="88" width="16" height="62" rx="6"/><rect x="474" y="88" width="16" height="62" rx="6"/><rect x="498" y="88" width="16" height="62" rx="6"/><rect x="522" y="88" width="16" height="62" rx="6"/>
+        </g>
+        <g fill="#3a6b48"><circle cx="74" cy="100" r="2.5"/><circle cx="74" cy="120" r="2.5"/><circle cx="74" cy="138" r="2.5"/><circle cx="122" cy="106" r="2.5"/><circle cx="122" cy="130" r="2.5"/><circle cx="218" cy="100" r="2.5"/><circle cx="218" cy="126" r="2.5"/><circle cx="338" cy="108" r="2.5"/><circle cx="338" cy="132" r="2.5"/><circle cx="458" cy="104" r="2.5"/><circle cx="458" cy="128" r="2.5"/></g>
+        <rect x="60" y="154" width="500" height="84" fill="#dcecca"/>
+        <g fill="#c4dca6" stroke="#a8c585" stroke-width=".6">
+          <circle cx="90" cy="178" r="13"/><circle cx="130" cy="200" r="14"/><circle cx="172" cy="174" r="12"/><circle cx="212" cy="206" r="15"/><circle cx="258" cy="180" r="13"/><circle cx="300" cy="204" r="14"/><circle cx="392" cy="178" r="13"/><circle cx="436" cy="202" r="14"/><circle cx="478" cy="176" r="12"/><circle cx="516" cy="200" r="13"/>
+        </g>
+        <g transform="translate(330,196)"><ellipse rx="30" ry="26" fill="#eef4dc" stroke="#bcae84" stroke-width="1"/><ellipse cy="-9" rx="20" ry="9" fill="#c05a33"/><ellipse cy="9" rx="20" ry="9" fill="#3f7d8c"/></g>
+        <rect x="60" y="238" width="500" height="32" fill="#e9d2a8" stroke="#3a342b" stroke-width=".5"/>
+        <g stroke="#caa86f" stroke-width=".8"><path d="M110 238v32M160 238v32M210 238v32M260 238v32M300 238v32M360 238v32M410 238v32M460 238v32M510 238v32"/></g>
+        <g transform="translate(285,254)"><path d="M-18 0 C-12 -10 -4 -10 0 0 C-4 10 -12 10 -18 0Z" fill="#7aa86a" stroke="#3a6b48" stroke-width="1"/><path d="M18 0 C12 -10 4 -10 0 0 C4 10 12 10 18 0Z" fill="#7aa86a" stroke="#3a6b48" stroke-width="1"/><ellipse rx="3.5" ry="8" fill="#fff"/></g>
+        <rect x="60" y="270" width="500" height="9" rx="3" fill="#dfc98f"/>
+        <line x1="560" y1="45" x2="610" y2="42" class="ld"/><text x="616" y="46" class="lbl-b">Cutícula superior</text>
+        <line x1="560" y1="67" x2="610" y2="68" class="ld"/><text x="616" y="72" class="lbl-b">Epiderme superior</text>
+        <line x1="560" y1="118" x2="610" y2="106" class="ld"/><text x="616" y="110" class="lbl-b" fill="#3a6b48">Parênquima paliçádico</text>
+        <line x1="560" y1="196" x2="610" y2="148" class="ld"/><text x="616" y="152" class="lbl-b" fill="#3a6b48">Parênquima lacunoso</text>
+        <text x="616" y="166" class="lbl">↑ os dois = mesófilo</text>
+        <line x1="360" y1="186" x2="610" y2="196" class="ld"/><text x="616" y="200" class="lbl-b" fill="#c05a33">Xilema (face superior)</text>
+        <line x1="360" y1="206" x2="610" y2="214" class="ld"/><text x="616" y="218" class="lbl-b" fill="#2f6975">Floema (face inferior)</text>
+        <line x1="560" y1="254" x2="610" y2="248" class="ld"/><text x="616" y="252" class="lbl-b">Epiderme inferior</text>
+        <line x1="303" y1="256" x2="610" y2="276" class="ld"/><text x="616" y="280" class="lbl-b" fill="#3a6b48">Estômato</text>
+        <line x1="560" y1="275" x2="610" y2="298" class="ld"/><text x="616" y="302" class="lbl-b">Cutícula inferior</text>
+      </svg>
+    </div>
+    <figcaption>Corte transversal da folha (esquema 70–79). Repare: o <b>paliçádico</b> fica em cima (capta luz) e o <b>lacunoso</b> embaixo (trocas gasosas); o estômato em geral fica na face inferior.</figcaption>
+  </figure>
+
+  <div class="grid2">
+    <div class="card">
+      <h4 style="margin-top:0;">De cima para baixo</h4>
+      <ul style="margin-bottom:0;">
+        <li><strong>Cutícula</strong>: camada de cera impermeável; reduz a perda de água.</li>
+        <li><strong>Epiderme</strong>: protege e é transparente (deixa a luz passar).</li>
+        <li><strong>Parênquima paliçádico</strong>: células colunares justapostas, cheias de cloroplastos → <strong>principal sede da fotossíntese</strong>. Fica logo abaixo da epiderme superior para pegar mais luz.</li>
+        <li><strong>Parênquima lacunoso</strong> (esponjoso): células frouxas com muitos espaços de ar → <strong>trocas gasosas</strong>.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4 style="margin-top:0;">Feixe e estômato</h4>
+      <ul style="margin-bottom:0;">
+        <li><strong>Feixe vascular</strong> (nervura): xilema voltado para cima (adaxial), floema para baixo (abaxial). Lembra do caule: feixe colateral.</li>
+        <li><strong>Estômato</strong>: duas <strong>células-guarda</strong> clorofiladas que delimitam um poro (ostíolo). Abrem e fecham para controlar a entrada de CO₂ e a saída de vapor d'água.</li>
+        <li>Folhas com estômatos só na face inferior (<strong>hipoestomáticas</strong>) perdem menos água — adaptação comum.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout co-vest">
+    <div class="co-h"><svg class="ic" viewBox="0 0 16 16" fill="none"><path d="M8 1l2 4.5 5 .5-3.7 3.4 1 5L8 11.5 3.7 14l1-5L1 6l5-.5z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>Transpiração × fotossíntese: o dilema do estômato</div>
+    <p>O estômato vive um conflito: para fazer fotossíntese, precisa abrir e deixar entrar CO₂ — mas, aberto, perde água por transpiração. Por isso plantas de clima seco (xerófitas) têm estratégias como cutícula espessa, estômatos protegidos em criptas e epiderme com várias camadas. Esse trade-off é tema recorrente em FUVEST e ENEM.</p>
+  </div>
+</section>
+
+<hr class="rule">
+<!-- 9. PEGADINHAS -->
+<section id="pegadinhas">
+  <h2 class="sec"><span class="num">09</span> Pegadinhas e erros frequentes</h2>
+  <p class="sec-lead">O resumo dos tropeços que mais derrubam candidatos neste assunto. Leia antes da prova.</p>
+  <div class="card">
+    <div class="flash"><span class="qn">01</span><span class="q">Xilema é célula viva?</span><span class="a"><strong>Não.</strong> Xilema = células MORTAS, com lignina, conduzem seiva BRUTA (água+sais). Floema = células VIVAS, com celulose, conduzem seiva ELABORADA (açúcares). Esse é o erro nº 1.</span></div>
+    <div class="flash"><span class="qn">02</span><span class="q">Colênquima ou esclerênquima é o flexível?</span><span class="a"><strong>Colênquima</strong> (vivo, celulose, flexível, em partes jovens). Esclerênquima é o rígido (morto, lignina).</span></div>
+    <div class="flash"><span class="qn">03</span><span class="q">Como diferencio raiz de caule num corte?</span><span class="a">Na <strong>raiz</strong>, xilema e floema ficam <strong>alternados</strong>. No <strong>caule</strong>, ficam <strong>juntos no mesmo feixe</strong> (colateral).</span></div>
+    <div class="flash"><span class="qn">04</span><span class="q">Raiz monocot tem o quê no centro?</span><span class="a"><strong>Medula</strong> (parênquima medular). A eudicot tem xilema central em <strong>estrela</strong>, sem medula.</span></div>
+    <div class="flash"><span class="qn">05</span><span class="q">Caule monocot engrossa?</span><span class="a">Em geral <strong>não</strong> — não tem câmbio. Feixes dispersos (atactostelo). A eudicot tem feixes em anel + câmbio → engrossa.</span></div>
+    <div class="flash"><span class="qn">06</span><span class="q">O câmbio produz o quê? E o felogênio?</span><span class="a"><strong>Câmbio</strong> → xilema e floema secundários. <strong>Felogênio</strong> → súber (fora) e feloderme (dentro). Não troque.</span></div>
+    <div class="flash"><span class="qn">07</span><span class="q">Celulose, lignina ou suberina?</span><span class="a">Celulose → colênquima/floema. Lignina → esclerênquima/xilema. Suberina → súber (cortiça).</span></div>
+    <div class="flash"><span class="qn">08</span><span class="q">A epiderme é tecido morto?</span><span class="a"><strong>Não</strong> — é VIVA, mesmo sendo revestimento. Quem é morto e reveste é o <strong>súber</strong>.</span></div>
+    <div class="flash"><span class="qn">09</span><span class="q">Coifa e gema ficam onde?</span><span class="a"><strong>Coifa</strong> só na ponta da RAIZ. <strong>Gemas</strong> (apical e laterais) no CAULE.</span></div>
+    <div class="flash"><span class="qn">10</span><span class="q">Qual parênquima faz mais fotossíntese?</span><span class="a">O <strong>paliçádico</strong> (em cima, células colunares cheias de cloroplasto). O lacunoso faz mais trocas gasosas.</span></div>
+    <div class="flash"><span class="qn">11</span><span class="q">Endosperma é 2n?</span><span class="a"><strong>Não</strong>, é <strong>3n</strong> (dupla fecundação). Já o embrião é 2n.</span></div>
+    <div class="flash"><span class="qn">12</span><span class="q">Protoderma origina o quê mesmo?</span><span class="a"><strong>Epiderme</strong>. Procâmbio → xilema/floema. Meristema fundamental → parênquima/colênquima/esclerênquima.</span></div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- 10. CAI NA PROVA -->
+<section id="prova">
+  <h2 class="sec"><span class="num">10</span> O que mais cai em prova</h2>
+  <p class="sec-lead">Onde focar a energia, com base no padrão de FUVEST, UNICAMP, UNESP e ENEM.</p>
+  <div class="grid2">
+    <div class="card">
+      <h4 style="margin-top:0;">🎯 Altíssima incidência</h4>
+      <ul style="margin-bottom:0;">
+        <li><strong>Associação meristema 1º → tecido</strong> (procâmbio / fundamental / protoderma). Quase toda banca cobra.</li>
+        <li><strong>Mono × eudicot por corte</strong> de raiz e de caule (interpretar imagem ou esquema).</li>
+        <li><strong>Xilema × floema</strong>: composição, vivas/mortas, tipo de seiva e sentido do transporte.</li>
+        <li><strong>Crescimento 1º × 2º</strong>: quem tem câmbio e felogênio; quem engrossa.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4 style="margin-top:0;">📈 Aparece com frequência</h4>
+      <ul style="margin-bottom:0;">
+        <li><strong>Função dos estômatos</strong> e o conflito transpiração × fotossíntese (xerófitas).</li>
+        <li><strong>Tipos de semente</strong> e o endosperma 3n (dupla fecundação).</li>
+        <li><strong>Reconhecer estruturas em fotomicrografias</strong> — a FUVEST adora imagem histológica real.</li>
+        <li><strong>Mecanismo de condução</strong>: coesão-tensão (xilema) e fluxo de massa (floema).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout co-vest">
+    <div class="co-h"><svg class="ic" viewBox="0 0 16 16" fill="none"><path d="M8 1l2 4.5 5 .5-3.7 3.4 1 5L8 11.5 3.7 14l1-5L1 6l5-.5z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>Estratégia de resolução em 1 frase</div>
+    <p>Quando aparecer uma imagem de corte: 1) localize a <strong>epiderme</strong> (borda), 2) ache o <strong>xilema e o floema</strong> e veja se estão <strong>alternados</strong> (raiz) ou <strong>juntos no mesmo feixe</strong> (caule/folha), 3) olhe o <strong>centro</strong> (medula → mono; xilema em estrela → eudicot). Três olhadas e você classifica qualquer corte.</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- 11. VIDEOS -->
+<section id="videos">
+  <h2 class="sec"><span class="num">11</span> Videoaulas completas</h2>
+  <p class="sec-lead">Aulas completas de canais consagrados entre vestibulandos, na sequência exata desta apostila. Cada botão abre <strong>direto o vídeo</strong> no YouTube.</p>
+
+  <div class="vid-grid">
+    <a class="vid" href="https://www.youtube.com/watch?v=JTuHdrew4fg" target="_blank" rel="noopener">
+      <span class="vid-ico"><svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span>
+      <span class="vid-txt"><span class="vt">Meristemas — Histologia Vegetal</span><span class="vm">Brasil Escola · seções 3 e 4</span></span>
+    </a>
+    <a class="vid" href="https://www.youtube.com/watch?v=XPx_n6-We0o" target="_blank" rel="noopener">
+      <span class="vid-ico"><svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span>
+      <span class="vid-txt"><span class="vt">Histologia vegetal — Tecidos (aula 1)</span><span class="vm">Planeta Biologia · seção 4</span></span>
+    </a>
+    <a class="vid" href="https://www.youtube.com/watch?v=GVTHi08QYnI" target="_blank" rel="noopener">
+      <span class="vid-ico"><svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span>
+      <span class="vid-txt"><span class="vt">Anatomia da raiz</span><span class="vm">Brasil Escola · seção 6</span></span>
+    </a>
+    <a class="vid" href="https://www.youtube.com/watch?v=Kjo52oytTug" target="_blank" rel="noopener">
+      <span class="vid-ico"><svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span>
+      <span class="vid-txt"><span class="vt">Caule — Botânica</span><span class="vm">Brasil Escola · seção 7</span></span>
+    </a>
+    <a class="vid" href="https://www.youtube.com/watch?v=y7tSvYDwd7c" target="_blank" rel="noopener">
+      <span class="vid-ico"><svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span>
+      <span class="vid-txt"><span class="vt">Anatomia da folha</span><span class="vm">Brasil Escola · seção 8</span></span>
+    </a>
+    <a class="vid" href="https://www.youtube.com/watch?v=z7ldyrrHME0" target="_blank" rel="noopener">
+      <span class="vid-ico"><svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span>
+      <span class="vid-txt"><span class="vt">Monocotiledôneas × Eudicotiledôneas</span><span class="vm">Biologia com Samuel Cunha · comparação</span></span>
+    </a>
+  </div>
+  <p style="font-size:.84rem;color:var(--ink-faint);">Os links foram verificados em buscas públicas; se algum vídeo sair do ar no futuro, procure o mesmo título no canal correspondente.</p>
+</section>
+
+<hr class="rule">
+
+<!-- 12. REVISAO -->
+<section id="revisao">
+  <h2 class="sec"><span class="num">12</span> Revisão final</h2>
+  <p class="sec-lead">A aula inteira condensada. Use como folha de resumo na véspera.</p>
+
+  <div class="recap">
+    <h3>As 8 frases que resolvem o assunto</h3>
+    <ul>
+      <li><strong>Meristema apical</strong> → cresce em comprimento (1º). <strong>Câmbio + felogênio</strong> → cresce em espessura (2º).</li>
+      <li><strong>Protoderma</strong> → epiderme. <strong>Procâmbio</strong> → xilema + floema. <strong>Meristema fundamental</strong> → parênquima, colênquima, esclerênquima.</li>
+      <li><strong>Xilema</strong>: morto, lignina, seiva bruta, sobe. <strong>Floema</strong>: vivo, celulose, seiva elaborada, distribui.</li>
+      <li><strong>Colênquima</strong>: vivo + celulose + flexível. <strong>Esclerênquima</strong>: morto + lignina + rígido.</li>
+      <li><strong>Câmbio</strong> → xilema 2º + floema 2º. <strong>Felogênio</strong> → feloderme (dentro) + súber (fora).</li>
+      <li><strong>Raiz</strong>: xilema e floema alternados. <strong>Caule</strong>: juntos no mesmo feixe colateral.</li>
+      <li><strong>Mono</strong>: raiz com medula, caule com feixes dispersos, sem câmbio. <strong>Eudicot</strong>: raiz com xilema em estrela, caule com feixes em anel, com câmbio.</li>
+      <li><strong>Folha</strong>: paliçádico (luz, em cima) + lacunoso (trocas gasosas) = mesófilo; estômato controla CO₂ e água.</li>
+    </ul>
+  </div>
+
+  <h3>Tabela-síntese dos tecidos</h3>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Tecido</th><th>Vivo/Morto</th><th>Parede</th><th>Função-chave</th></tr></thead>
+      <tbody>
+        <tr><td class="name">Epiderme</td><td><span class="pill pill-viva">vivo</span></td><td>—</td><td>revestimento e proteção</td></tr>
+        <tr><td class="name">Colênquima</td><td><span class="pill pill-viva">vivo</span></td><td><span class="pill pill-cel">celulose</span></td><td>sustentação flexível (jovem)</td></tr>
+        <tr><td class="name">Esclerênquima</td><td><span class="pill pill-morta">morto</span></td><td><span class="pill pill-lig">lignina</span></td><td>sustentação rígida</td></tr>
+        <tr><td class="name">Parênquima</td><td><span class="pill pill-viva">vivo</span></td><td>—</td><td>preenchimento, reserva, metabolismo</td></tr>
+        <tr><td class="name">Xilema</td><td><span class="pill pill-morta">morto</span></td><td><span class="pill pill-lig">lignina</span></td><td>seiva bruta (água + sais)</td></tr>
+        <tr><td class="name">Floema</td><td><span class="pill pill-viva">vivo</span></td><td><span class="pill pill-cel">celulose</span></td><td>seiva elaborada (açúcares)</td></tr>
+        <tr><td class="name">Súber</td><td><span class="pill pill-morta">morto</span></td><td><span class="pill pill-sub">suberina</span></td><td>revestimento impermeável</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Tabela-síntese: mono × eudicot</h3>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Órgão / critério</th><th>Monocotiledônea</th><th>Eudicotiledônea</th></tr></thead>
+      <tbody>
+        <tr><td class="name">Cotilédones</td><td>1</td><td>2</td></tr>
+        <tr><td class="name">Raiz (corte)</td><td>xilema/floema alternados + <strong>medula</strong></td><td>xilema central em <strong>estrela</strong>, sem medula</td></tr>
+        <tr><td class="name">Caule (corte)</td><td>feixes <strong>dispersos</strong> (atactostelo)</td><td>feixes em <strong>anel</strong> (eustelo)</td></tr>
+        <tr><td class="name">Crescimento 2º</td><td>ausente (sem câmbio)</td><td>presente (com câmbio)</td></tr>
+        <tr><td class="name">Exemplos</td><td>milho, bambu, palmeira, capim</td><td>feijão, ipê, eucalipto, soja</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout co-def">
+    <div class="co-h"><svg class="ic" viewBox="0 0 16 16" fill="none"><path d="M2 8l4 4 8-9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Checklist de domínio</div>
+    <p>Você está pronto se consegue, de cabeça: (1) desenhar o fluxograma meristema→tecido; (2) preencher a tabela vivo/morto + celulose/lignina/suberina; (3) classificar um corte de raiz e de caule como mono ou eudicot; (4) explicar por que xilema é morto e floema é vivo; (5) nomear as 5 zonas da raiz e as camadas da folha.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <div class="fl">
+      <svg style="width:18px;height:18px" viewBox="0 0 24 24" fill="none"><path d="M5 19C5 11 11 5 19 5c0 8-6 14-14 14Z" fill="#3a6b48"/></svg>
+      Anatomia e Morfologia Vegetal — Aula 12
+    </div>
+    <p style="margin:0 0 6px;"><b>Biodiversidade · Capítulos 6 e 7</b> · Professores Croti e Vânia · 2ª série do Ensino Médio.</p>
+    <p style="margin:0;">Aula montada a partir dos esquemas, tabelas e gabaritos da apostila. Diagramas redesenhados com código de cores consistente (1 cor = 1 tecido) para fixação visual. Bom estudo. 🌱</p>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="Voltar ao topo">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 19V6M6 12l6-6 6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script>
+(function(){
+  var prog=document.getElementById('progress');
+  var totop=document.getElementById('totop');
+  var links=Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
+  function onScroll(){
+    var h=document.documentElement;
+    var st=h.scrollTop||document.body.scrollTop;
+    var max=(h.scrollHeight-h.clientHeight)||1;
+    prog.style.width=(st/max*100)+'%';
+    totop.classList.toggle('show', st>500);
+    var idx=0, mid=st+h.clientHeight*0.30;
+    for(var i=0;i<secs.length;i++){ if(secs[i] && secs[i].offsetTop<=mid) idx=i; }
+    links.forEach(function(l,i){ l.classList.toggle('active', i===idx); });
+    var act=links[idx];
+    if(act && act.parentNode){
+      var pr=act.parentNode.getBoundingClientRect(), ar=act.getBoundingClientRect();
+      if(ar.right>pr.right||ar.left<pr.left){ act.scrollIntoView({inline:'center',block:'nearest'}); }
+    }
+  }
+  totop.addEventListener('click',function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  onScroll();
+})();
+</script>
+</body>
+</html>
